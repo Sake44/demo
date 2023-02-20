@@ -1,0 +1,13 @@
+version: "3.7"
+services:
+  mysql:
+    image: mysql:latest
+    ports:
+      - "3307:3306"
+    volumes:
+      - ~/apps/mysql:/var/lib/mysql-test
+    environment:
+      - MYSQL_ROOT_PASSWORD=Rizlaplus13!
+      - MYSQL_DATABASE=gestionelibri
+    container_name: mysql-test
+    
