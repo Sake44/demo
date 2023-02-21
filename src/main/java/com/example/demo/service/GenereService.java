@@ -38,4 +38,14 @@ public class GenereService {
         }
         return true;
     }
+
+    public Boolean deleteById(Long id) {
+        try {
+            genereRepository.deleteById(id);
+        } catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+        return true;
+    }
 }
